@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel= "stylesheet" href="~/css/datatable.css">
+<h1>Seccion de pivotes</h1>
+
+
+<button onclick="Editar(0)" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Nuevo
+</button>
+
+<div id="divContenedor">
+
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lblTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form id="frmGuardarPivote" method="post" class="mb-3">
+              <div class="row">
+                     <div class="col-md-6">
+                            <label>Grupo Desde</label>
+                            <input type="hidden" class="form-control" readonly name="registro" value="0" />
+                            <select class="form-control o" name="desdeGrupo" id="cboGrupoDesde">
+                            </select>
+                        </div>
+                 <div class="col-md-6">
+                            <label>Grupo Hasta</label>
+                            <select class="form-control o" name="hastaGrupo" id="cboGrupoHasta">
+                            </select>
+                        </div>
+              </div>
+               <div class="row">
+                  <div class="col-md-6">
+                      <label>Desayuno</label>
+                      <select class="form-control ob" name="desayuno" id="desayuno">
+                         <option value="">--Seleccione--</option>
+                         <option value="0">No</option>
+                         <option value="1">Si</option>
+                      </select>
+                  </div>
+              </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <label>Almuerzo</label>
+                      <select class="form-control ob" name="almuerzo" id="almuerzo">
+                         <option value="">--Seleccione--</option>
+                         <option value="0">No</option>
+                         <option value="1">Si</option>
+                      </select>
+                  </div>
+                  <div class="col-md-6">
+                      <label>Cena</label>
+                      <select class="form-control ob" name="cena" id="cena">
+                         <option value="">--Seleccione--</option>
+                        <option value="0">No</option>
+                         <option value="1">Si</option>
+                      </select>
+                  </div>
+              </div>
+             <div class="row">
+                 <div class="col-md-6">
+                      <label>Alojamiento</label>
+                       <select class="form-control ob" name="alojamiento" id="alojamiento">
+                         <option value="">--Seleccione--</option>
+                         <option value="0">No</option>
+                         <option value="1">Si</option>
+                      </select>
+                  </div>
+                 <div class="form-group col-md-6">
+                   <label>Estatus</label>
+                      <select class="form-control ob" name="estatus" id="estatus">
+                         <option value="">--Seleccione--</option>
+                         <option value="0">Inactivo</option>
+                         <option value="1">Activo</option>
+                      </select>                 
+                 </div>
+             </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="GuardarDatos()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="~/js/jquery.js"></script>
+<script src="~/js/datatable.js"></script>
+<script src="~/js/sweetalert2@11.js"></script>
+<script src="~/js/generic.js"></script>
+<script src=~/js/pivote.js></script>

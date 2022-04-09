@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Actividades</h1>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" id="txtnombrebusqueda" placeholder="Actividad" onkeyup="filtrarActividades()"/>
+</div>
+
+<fieldset>
+    <legend>Datos de las Actividades</legend>
+    <form method="post" id="frmGuardarActividades">
+        <div class="row">
+             <div class="form-group col-md-6">
+                <label>Codigo</label>
+                <input type="hidden" name="registro" value="0"  class="form-control"  readonly />
+                <input type="text" name="codigo"  class="form-control ob max-3 min-1" />
+            </div>
+            <div class="form-group col-md-6">
+               <label>Estatus</label>
+                  <select class="form-control ob" name="estatus" id="estatus">
+                     <option value="">--Seleccione--</option>
+                     <option value="0">Inactivo</option>
+                     <option value="1">Activo</option>
+                  </select>                 
+             </div>
+             <div class="form-group col-md-12">
+                <label>Descripcion de las Actividades</label>
+                <textarea name="descripcion" class="form-control ob max-50 min-3"></textarea>
+             </div>
+        </div>
+    </form>
+    <button class="btn btn-primary" onclick="GuardarDatos()">Aceptar</button>
+    <button class="btn btn-danger" onclick="Limpiar()">Limpiar</button>
+</fieldset>
+<div id="divContenedor">
+
+</div>
+
+<script src="~/js/sweetalert2@11.js"></script>
+<script src="~/js/generic.js"></script>
+<script src="~/js/actividades.js"></script>

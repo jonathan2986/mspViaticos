@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Viaticos</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viaticoModal">
+    Nuevo
+</button>
+
+<!-- Modal -->
+<div class="modal  fade" id="viaticoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="lblTitulo"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+              
+                    <form method="post" id="frmEstablecimiento" class="row">
+               
+                        <input type="hidden" value="Admin" name="digitado" readonly />
+
+                        <div class="form-group col-4" style="display:none">
+                                <label>Registro</label>
+                                <input type="text" name="registro" class="form-control" id="registroTxt" readonly value="0">
+
+                        </div>
+
+             
+                        <div class="form-group col-4">
+                                <label>Codigo</label>
+                                <input type="text" name="codigo" class="form-control" id="codigoTxt" placeholder="Ingrese un codigo">
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Nombre</label>
+                                <input type="text" name="nombre" class="form-control" id="nombreTxt" value="" placeholder="Nombre">
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>RNC</label>
+                                <input type="text" name="rnc" class="form-control" id="rncTxt" placeholder="RNC">
+
+                        </div>
+                        <div class="form-group col-4">
+                                <label>Provincias</label>
+                                <select class="form-control" name="provincia" id="cboProvincia" onchange="habilitarCboMunicipio(this.value)">
+                                </select>
+
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Municipios</label>
+                                <select class="form-control" disabled name="municipio" id="cboMunicipio" onchange="habilitarCboDistrito(this.value)">
+                                </select>
+                        </div>
+                        <div class="form-group col-4">
+                                <label>Distrito</label>
+                                <select class="form-control" disabled name="distrito" id="cboDistrito">
+                                </select>
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Direccion</label>
+                                <input type="text" name="direccion" class="form-control" placeholder="Direccion" id="direccionTxt">
+
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Telefono</label>
+                                <input type="text" name="telefono1" class="form-control" value="" placeholder="Telefono" id="telefono1txt">
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Celular</label>
+                                <input type="text" name="telefono2" class="form-control" placeholder="Celular" id="telefono2txt">
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Correo</label>
+                                <input type="text" name="email" class="form-control" value="" placeholder="Email" id="emailTxt">
+                        </div>
+                 
+                        <div class="form-group col-4">
+                                <label>Regional de Salud</label>
+                                <select class="form-control" name="regionalSalud" id="cboRegional">
+                                </select>
+                        </div>
+                 
+                        <div class="form-group col-4">
+                                <label>Tipo de Direccion de Salud</label>
+                                <select class="form-control o" name="direccionTipo" id="cboDireccionTipo" onchange="habilitarCboDireccionSalud(this.value) ">
+                                    <option value="">--Seleccione--</option>
+                                    <option value="DAS">DAS</option>
+                                    <option value="DPS">DPS</option>
+                                </select>
+                        </div>
+                
+
+                        <div class="form-group col-4">
+                                <label>Direccion de Salud</label>
+                                <select class="form-control" disabled name="direccionSalud" id="cboDireccionSalud">
+                                </select>
+                        </div>
+
+
+                        <div class="form-group col-4">
+                                <label>Tipo</label>
+                                <select class="form-control" name="sector" id="sector">
+                                    <option value="">--Seleccione--</option>
+                                    <option value='P'>Hogar Permanente</option>
+                                    <option value='D'>Hogar de Dia</option>
+                                    <option value='O'>Otros</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Sector</label>
+                                <select class="form-control" name="tipo" id="tipo">
+                                    <option value="">--Seleccione--</option>
+                                    <option value='P'>Publico</option>
+                                    <option value='V'>Privado</option>
+                                    <option value='M'>Mixtos</option>
+                                    <option value='O/A'>ONG/ASF</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group col-4">
+                                <label>Seccion</label>
+                                <select class="form-control" name="seccion" id="seccion">
+                                    <option value="">--Seleccione--</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group col-4">
+
+                                <label>Paraje</label>
+                                <select class="form-control" name="paraje" id="paraje">
+                                    <option value="">--Seleccione--</option>
+                                </select>
+                        </div>
+   
+                        <div class="form-group col-4">
+                                <label>Estatus</label>
+                                <select class="form-control" name="estatus" id="estatus">
+                                    <option value="">--Seleccione--</option>
+                                    <option value="0">Inactivo</option>
+                                    <option value="1">Activo</option>
+                                </select>
+                        </div>
+    
+
+                    </form>
+                    <button class="btn btn-primary" onclick="GuardarDatos()">Aceptar</button>
+                    <button class="btn btn-danger" onclick="Limpiar()">Limpiar</button>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-12" id="divContenedor">
+        </div>
+
+
+    </div>
+</div>
+
+<div class="col-12">
+
+
+
+</div>
+
+<script src="~/js/sweetalert2.js"></script>
+<script src="~/js/bootstrap.js"></script>
+<script src="~/js/generic.js"></script>
+<script src="~/js/viatico.js"></script>
+
+

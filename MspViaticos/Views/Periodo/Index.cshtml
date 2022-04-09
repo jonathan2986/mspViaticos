@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel= "stylesheet" href="~/css/datatable.css">
+<h1>Periodos</h1>
+
+<button onclick="Editar(0)" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Nuevo
+</button>
+<div id="divContenedor">
+
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lblTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form id="frmGuardarPeriodo" method="post" class="mb-3">
+              <div class="row">
+                  <div class="col-md-6">
+                        <label>Dependencia</label>
+                        <input type="hidden" class="form-control" readonly name="registro" value="0" />
+                        <select class="form-control o" name="dependencia" id="cboDependencia">
+                        </select>
+                 </div>
+                  <div class="col-md-6">
+                      <label>Año</label>
+                      <input type="number" class="form-control" name="anio" placeholder="Digite el año" />
+                  </div>
+                  <div class="form-group col-md-6">
+               <label>Mes</label>
+                  <select class="form-control ob" name="mes" id="mes">
+                     <option value="">--Seleccione el Mes--</option>
+                     <option value="1">Enero</option>
+                     <option value="2">Febrero</option>
+                     <option value="3">Marzo</option>
+                     <option value="4">Abril</option>
+                     <option value="5">Mayo</option>
+                     <option value="6">Junio</option>
+                     <option value="7">Julio</option>
+                     <option value="8">Agosto</option>
+                     <option value="9">Septiembre</option>
+                     <option value="10">Octubre</option>
+                     <option value="11">Noviembre</option>
+                     <option value="12">Diciembre</option>
+                  </select>                 
+             </div>
+                   <div class="col-md-6">
+                      <label>Desde</label>
+                      <input type="datetime-local" class="form-control" id="desde"  name="desde" />
+                  </div>
+                  <div class="col-md-6">
+                      <label>Hasta</label>
+                      <input type="datetime-local" class="form-control" id="hasta"  name="hasta" />
+                  </div>
+                  <div class="form-group col-md-6">
+               <label>Estatus</label>
+                  <select class="form-control ob" name="estatus" id="estatus">
+                     <option value="">--Seleccione--</option>
+                     <option value="0">Cerrado</option>
+                     <option value="1">Abierto</option>
+                  </select>                 
+             </div>
+                
+              </div>       
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="GuardarDatos()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="~/js/jquery.js"></script>
+<script src="~/js/datatable.js"></script>
+<script src="~/js/calendario.js"></script>
+<script src="~/js/sweetalert2@11.js"></script>
+<script src="~/js/generic.js"></script>
+<script src="~/js/periodo.js"></script>

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Grupos</h1>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Nuevo
+</button>
+
+@*<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Lanzar Modal
+</button>*@
+
+
+<div id="divContenedor">
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Agregar Grupos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form id="frmGuardarGrupo" method="post" class="mb-3">
+              <div class="row">
+                    <div class="col-md-6">
+                      <label>Codigo</label>
+                      <input type="hidden" class="form-control" readonly name="registro" />
+                      <input type="text" class="form-control" id="codigo"  name="Codigo" placeholder="Digite el Codigo" />
+                  </div>
+                  <div class="col-md-6">
+                      <label>Descripcion</label>
+                      <input type="text" class="form-control" name="descripcion" placeholder="Digite una Descripcion" />
+                  </div>
+              </div>
+               <div class="row">
+                    <div class="col-md-6">
+                      <label>Tarifa</label>
+                      <input type="number" class="form-control" name="tarifa" placeholder="Tarifa" />
+                  </div>
+                  <div class="col-md-6">
+                      <label>Desayuno</label>
+                      <input type="number" class="form-control" name="desayuno" placeholder="Desayuno" />
+                  </div>
+              </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <label>Almuerzo</label>
+                      <input type="number" class="form-control" name="almuerzo" placeholder="Almuerzo" />
+                  </div>
+                  <div class="col-md-6">
+                      <label>Cena</label>
+                      <input type="number" class="form-control" name="cena" placeholder="Cena" />
+                  </div>
+              </div>
+             <div class="row">
+                 <div class="col-md-6">
+                      <label>Alojamiento</label>
+                      <input type="number" class="form-control" name="alojamiento" placeholder="Alojamiento" />
+                  </div>
+                 <div class="form-group col-md-6">
+                   <label>Estatus</label>
+                      <select class="form-control ob" name="estatus" id="estatus">
+                         <option value="">--Seleccione--</option>
+                         <option value="0">Inactivo</option>
+                         <option value="1">Activo</option>
+                      </select>                 
+                 </div>
+             </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="GuardarDatos()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="~/js/bootstrap.js"></script>
+<script src="~/js/sweetalert2@11.js"></script>
+<script src=~/js/generic.js></script>
+<script src=~/js/grupo.js></script>

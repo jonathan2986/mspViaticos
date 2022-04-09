@@ -1,0 +1,17 @@
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaNegocio.deps.json
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaNegocio.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\ref\CapaNegocio.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaNegocio.pdb
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaDatos.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaEntidad.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaDatos.pdb
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\bin\Debug\net6.0\CapaEntidad.pdb
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.AssemblyInfoInputs.cache
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.AssemblyInfo.cs
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.csproj.CopyComplete
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\ref\CapaNegocio.dll
+C:\Users\jonat\source\repos\MspViaticos\CapaNegocio\obj\Debug\net6.0\CapaNegocio.pdb

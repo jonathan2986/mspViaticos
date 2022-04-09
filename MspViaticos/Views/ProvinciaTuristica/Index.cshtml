@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel= "stylesheet" href="~/css/datatable.css">
+
+<h1>Provincia Turistica</h1>
+
+<button onclick="Editar(0)" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Nuevo
+</button>
+
+<div id="divContenedor">
+
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="lblTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form id="frmGuardarProvinciaTuristica" method="post" class="mb-3">
+              <div class="row">
+             
+                 <div class="col-md-6">
+                        <label>Provincias Turisticas</label>
+                        <input type="hidden" class="form-control" readonly name="registro" value="0" />
+                        <select class="form-control o" name="provincia" id="cboProvinciaTuristica">
+                        </select>
+                 </div>
+                  <div class="col-md-6">
+                      <label>Porciento</label>
+                      <input type="number" class="form-control" name="porciento" placeholder="Porciento" />
+                  </div>
+              </div>       
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" onclick="GuardarDatos()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="~/js/jquery.js"></script>
+<script src="~/js/datatable.js"></script>
+<script src="~/js/sweetalert2@11.js"></script>
+<script src="~/js/generic.js"></script>
+<script src="~/js/provinciaTuristica.js"></script>
